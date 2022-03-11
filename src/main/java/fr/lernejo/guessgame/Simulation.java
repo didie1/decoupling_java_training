@@ -19,32 +19,53 @@ public class Simulation {
          * @return true if the player have guessed the right number
          */
         private boolean nextRound() {
-            long guess = player.askNextGuess();
-            if (numberToGuess == guess)
-            {
-                return true;
-            }
-            else
-            {
-                if (guess < numberToGuess)
-                {
-                    player.respond(true);
-                    return false;
+            if (this.player instanceof HumanPlayer) {
+                long guess = player.askNextGuess();
+                if (numberToGuess == guess) {
+                    return true;
+                } else {
+                    if (guess < numberToGuess) {
+                        player.respond(true);
+                        return false;
+                    } else {
+                        player.respond(false);
+                        return false;
+                    }
                 }
-                else
-                {
-                    player.respond(false);
-                    return false;
-                }
-
             }
+            else if (this.player instanceof ComputerPlayer){
+                    long guess = ((ComputerPlayer) player).search();
+                    if (numberToGuess == guess) {
+                        return true;
+                    } else {
+                        if (guess < numberToGuess) {
+                            player.respond(true);
+                            ((ComputerPlayer) player).setMaximum(guess);
+                        } else {
+                            player.respond(false);
+                            ((ComputerPlayer) player).setMinimum(guess);
+                        }
+                    }
+                }
+            return false;
         }
 
-        public void loopUntilPlayerSucceed() {
-            while (nextRound() == false)
-            {
-                nextRound();
-            }
+    public void loopUntilPlayerSucceed(long max) {
+        long iteration = 0;
+        long time = System.currentTimeMillis();
+        while (!nextRound() && iteration++ < max) ;
+        long timeStamp = System.currentTimeMillis();
+
+        long durationParty = timeStamp - time;
+
+        if (iteration >= max)
+        {
+            logger.log("Maybe next time !");
         }
+        else
+        {
+            logger.log("Congrats!");
+        }
+    }
     }
 
