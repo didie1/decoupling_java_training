@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class ContextualLogger implements Logger{
     public Logger log;
     public String name;
-    public ContextualLogger(Logger logger, String name){
+    public ContextualLogger(String name,Logger logger){
         this.log = logger;
         this.name = name;
     }

@@ -22,17 +22,14 @@ public class ComputerPlayer implements Player{
     }
     @Override
     public long askNextGuess() {
-        return 0;
+        return search();
     }
 
     @Override
     public void respond(boolean lowerOrGreater) {
-        if (!lowerOrGreater)
-        {
+        if (lowerOrGreater == true) {
             log.log("Lower");
-        }
-        else
-        {
+        } else {
             log.log("Greater");
         }
     }
