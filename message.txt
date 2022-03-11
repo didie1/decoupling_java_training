@@ -1,1 +1,21 @@
 2022-03-11 12:00:05.314 player Type in a number
+2022-03-11 12:06:52.283 player Type in a number
+2022-03-11 12:06:58.009 player Greater
+2022-03-11 12:06:58.010 player Type in a number
+2022-03-11 12:07:05.135 player Greater
+2022-03-11 12:07:05.139 player Type in a number
+2022-03-11 12:07:07.751 player Greater
+2022-03-11 12:07:07.754 player Type in a number
+2022-03-11 12:07:10.756 player Greater
+2022-03-11 12:07:10.757 player Type in a number
+2022-03-11 12:07:13.562 player Lower
+2022-03-11 12:07:13.566 player Type in a number
+2022-03-11 12:07:16.180 player Lower
+2022-03-11 12:07:16.182 player Type in a number
+2022-03-11 12:07:19.042 player Lower
+2022-03-11 12:07:19.043 player Type in a number
+2022-03-11 12:07:22.940 player Lower
+2022-03-11 12:07:22.943 player Type in a number
+2022-03-11 12:07:26.069 player Lower
+2022-03-11 12:07:26.071 player Type in a number
+2022-03-11 12:07:27.957 simulation Congrats!
